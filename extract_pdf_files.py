@@ -63,7 +63,7 @@ def process_all_files(input_dir, output_dir: Path):
     for file in files["pdf"]:
         file_text = process_one_file(file)
         
-        output_file = output_dir / f"{file.stem}extracted.txt"
+        output_file = output_dir / f"{file.stem} extracted.txt"
 
         with open(output_file, "w", encoding="utf-8") as file:
             file.write(file_text)
